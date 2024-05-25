@@ -1,0 +1,28 @@
+.headerImage {
+  height: 60vh;
+  width: 100%;
+  background-image: url(../public/images/landscape.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.headerImage h1 {
+  text-align: center;
+  color: var(--red);
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+.heading {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .headerImage {
+    background-image: url(../public/images/kids-wrestling.jpg);
+  }
+}

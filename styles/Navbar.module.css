@@ -1,0 +1,97 @@
+.nav {
+  /* border-bottom: 2px solid rgb(1, 90, 224); */
+  margin: 0;
+  background-color: white;
+  /* border-bottom: 3px solid rgb(0, 229, 255); */
+  font-size: 1.3em;
+  padding: 2em;
+  padding-right: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.desktopNav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.desktopNav a:link {
+  text-decoration: none;
+}
+
+.desktopNav a:visited {
+  text-decoration: none;
+}
+
+.desktopNavLinks {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  cursor: pointer;
+  border-top-right-radius: 30%;
+  border-top-left-radius: 0.2em;
+  border-bottom-left-radius: 25%;
+  border-bottom-right-radius: 0.2em;
+}
+
+/* The headings in the desktop navbar: centering */
+.navItem {
+  color: black;
+  cursor: pointer;
+  display: flex;
+  margin-right: 3em;
+  padding: 1rem;
+}
+
+.navItem:hover {
+  color: var(--red);
+}
+
+.active,
+.active:hover {
+  color: var(--blue);
+  font-size: x-large;
+  border-top: 4px solid var(--blue);
+}
+
+.menuIcon {
+  padding-right: 0;
+  display: none;
+  align-items: center;
+  font-size: 24px;
+}
+
+.menuIconIcon {
+  color: black;
+  font-size: 1.5em;
+}
+
+.menuIconIcon:hover {
+  color: rgb(101 179 228);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .brandImage {
+    height: 50px;
+    width: 250px;
+  }
+  .menuIcon {
+    display: flex;
+  }
+  .navItem {
+    display: none;
+  }
+  .nav {
+    margin: 0;
+    padding: 1rem;
+  }
+}

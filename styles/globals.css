@@ -1,0 +1,323 @@
+:root {
+  --red: #8e1b24;
+  --blue: #041184;
+}
+
+/* Set the black background */
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: white;
+  width: 100%;
+}
+
+.mainContainer {
+  padding: 0;
+  background-image: url(../public/images/chris-one-arm-choke.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  height: 110%;
+}
+
+.main {
+  min-height: 90vh;
+  padding: 1rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+input,
+textarea {
+  background-color: rgb(240, 240, 240);
+}
+
+.navbar-brand,
+.nav-link {
+  color: white;
+}
+
+.offcanvas {
+  background-color: black;
+  color: white;
+}
+
+.offcanvas .nav-link {
+  color: rgb(6, 144, 229);
+  font-size: 3.5em;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: var(--red);
+}
+
+/* Menu */
+.break {
+  height: 4em;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  background: white;
+  color: black;
+  padding-top: 100px;
+  transform: translateX(-100%);
+  will-change: transform;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+}
+
+.menu li {
+  color: black;
+  display: block;
+  transform-origin: -20px 50%;
+  font-weight: bold;
+  font-size: 48px;
+  padding: 10px;
+  will-change: transform, opacity, filter;
+}
+
+.grid-item {
+  width: 0%;
+}
+
+.showcase__description {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.showcase__carousel {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features ul {
+  text-align: left;
+}
+
+.features li {
+  text-decoration: none;
+}
+
+#menuIcon {
+  margin-right: 0;
+  display: none;
+  align-items: center;
+}
+
+#menuIconIcon {
+  color: black;
+  font-size: 1.5em;
+}
+
+.menu__button {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: green;
+  padding: 10px;
+}
+
+.animation {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+}
+
+/* Style the container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Style the heading */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Style the form */
+form {
+  width: 50%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+}
+
+textarea {
+  height: 160px;
+}
+
+button {
+  background-color: var(--blue);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.2em;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+button:hover {
+  background-color: #0720ff;
+}
+
+[aria-label="Close"] {
+  background-color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.showcase__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.confirmationText {
+  color: white;
+  font-size: large;
+  text-transform: capitalize;
+}
+
+#EyecatchingWebsites {
+  background: linear-gradient(45deg, black, 40%, white);
+}
+
+#UltrafastLoadingSpeeds {
+  background: linear-gradient(45deg, rgb(3, 7, 244), 40%, white);
+}
+
+#TopoftheLineFunctionality {
+  background: linear-gradient(45deg, rgb(236, 244, 3), 40%, white);
+}
+
+#TopoftheHill {
+  background: linear-gradient(45deg, rgb(236, 244, 3), 40%, white);
+}
+
+/* Define the keyframes for the typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* Add animation properties to the text */
+.typing-text,
+.mobile-typing-text-1,
+.mobile-typing-text-2,
+.mobile-typing-text-3 {
+  overflow: hidden;
+  /* Hide the overflow text while typing */
+
+  /* Add a blinking cursor */
+  white-space: nowrap;
+  /* Prevent line breaks */
+}
+
+.typing-text {
+  animation: typing 2s steps(32, end), blink-caret 0.5s step-end infinite;
+  border-right: 2px solid rgba(3, 179, 248);
+}
+
+.mobile-typing-text-1 {
+  animation: typing 0.6s steps(12, end);
+}
+
+.mobile-typing-text-2 {
+  animation: typing 0.35 steps(7, end) 0.6s;
+}
+
+.mobile-typing-text-3 {
+  animation: typing 0.65s steps(11, end) 0.95s,
+    blink-caret 0.5s step-end infinite;
+  border-right: 2px solid rgba(3, 179, 248);
+}
+
+/* Create a blinking cursor animation */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: rgba(3, 179, 248);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #menuIcon {
+    display: flex;
+  }
+
+  .mainContainer {
+    background: linear-gradient(45deg, darkblue, rgb(3, 179, 248)),
+      url(../public/images/adults\ guard.jpg);
+    background-repeat: no-repeat;
+    background-size: auto, 100vh;
+    background-blend-mode: lighten;
+  }
+
+  .Heading {
+    text-shadow: 0 -3px 4px #000000;
+  }
+}

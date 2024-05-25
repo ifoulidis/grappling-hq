@@ -1,0 +1,68 @@
+.container {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  height: 90vh;
+  background-image: url(../public/images/chris-one-arm-choke.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bottomImage {
+  height: 50vh;
+  background-image: url(../public/images/chris-leg-lock.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.welcome {
+  display: flex;
+  overflow-x: hidden;
+  background-color: white;
+  padding: 4rem 10rem;
+  text-align: left;
+}
+
+.welcomeText {
+  width: 50%;
+  padding-left: 15%;
+}
+
+.welcomeImage {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding-left: 10%;
+  justify-content: flex-start;
+}
+
+.welcome h1 {
+  color: var(--blue);
+  font-size: 3rem;
+}
+
+.welcome p {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 776px) {
+  .main {
+    background-image: url(../public/images/kids\ rolling.jpg);
+    height: 70vh;
+  }
+  .welcome {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .welcomeText {
+    width: 100%;
+    padding: 0%;
+  }
+  .welcomeImage {
+    padding: 0%;
+  }
+}

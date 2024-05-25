@@ -1,0 +1,19 @@
+.textRevealBox {
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2em;
+  border-radius: 0.2em;
+  font-size: large;
+}
+
+.collapseHeading {
+  cursor: pointer;
+  color: white;
+  text-shadow: 0 2px 3px rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 900px) {
+  .textRevealBox {
+    width: 95%;
+  }
+}
