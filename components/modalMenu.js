@@ -52,6 +52,7 @@ const ModalMenu = ({ handleClose }) => {
           className={styles.linkContainter}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
+          onClick={handleClose}
         >
           <Link href="/about" className={styles.navLinks}>
             About
@@ -61,6 +62,7 @@ const ModalMenu = ({ handleClose }) => {
           className={styles.linkContainter}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
+          onClick={handleClose}
         >
           <Link href="/timetable" className={styles.navLinks}>
             Timetable
@@ -70,6 +72,7 @@ const ModalMenu = ({ handleClose }) => {
           className={styles.linkContainter}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
+          onClick={handleClose}
         >
           <Link href="/contact" className={styles.navLinks}>
             Contact

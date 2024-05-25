@@ -309,6 +309,20 @@ a:hover {
     display: flex;
   }
 
+  form {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .timetable {
+    width: 100%;
+    height: auto;
+  }
+
+  .ttimage {
+    padding: 1rem;
+  }
+
   .mainContainer {
     background: linear-gradient(45deg, darkblue, rgb(3, 179, 248)),
       url(../public/images/adults\ guard.jpg);

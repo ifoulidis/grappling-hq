@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import styles from "../styles/Contact.module.css";
+import { useMediaQuery } from "@mui/material";
 
 function ContactForm({ initialSubject, ...props }) {
   const [name, setName] = useState("");
@@ -9,6 +10,7 @@ function ContactForm({ initialSubject, ...props }) {
   const [subject, setSubject] = useState(initialSubject || "");
   const [message, setMessage] = useState("");
   const [confirmation, setconfirmation] = useState("");
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 700px)");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -106,11 +108,10 @@ function ContactForm({ initialSubject, ...props }) {
         </form>
         <h1 className="confirmationText">{confirmation}</h1>
         <h1 class={styles.heading}>Drive to Us</h1>
-
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3157.279041196928!2d176.16524927587952!3d-37.689645272007105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d6ddb389053eec7%3A0xf88dad25545ed86!2sGrapplingHQ%20%7C%20Jiu%20Jitsu%20and%20MMA%20gym!5e0!3m2!1sen!2snz!4v1716594990463!5m2!1sen!2snz"
-          width="600"
-          height="450"
+          width={isSmallDevice ? "100%" : "600"}
+          height={isSmallDevice ? "300" : "450"}
           style={{ border: "0" }}
           allowFullScreen=""
           loading="lazy"

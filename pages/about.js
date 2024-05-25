@@ -41,6 +41,7 @@ export default function About({ setPage }) {
             src={ChrisChoking}
             width={400}
             height={300}
+            className={styles.img}
           />
         </div>
       </div>
