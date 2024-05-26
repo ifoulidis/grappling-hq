@@ -190,7 +190,7 @@ textarea {
 }
 
 button {
-  background-color: var(--blue);
+  background-color: var(--red);
   color: #fff;
   padding: 0.5rem 1rem;
   border: none;
@@ -213,7 +213,7 @@ a {
 }
 
 a:hover {
-  color: var(--blue);
+  color: var(--red);
 }
 
 * {
