@@ -1,10 +1,7 @@
-import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import NaviagtionBar from "../components/navbar";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import KidsClass from "@/public/images/kids-wrestling.jpg";
 
 const container = {
@@ -42,8 +39,8 @@ export default function Home({ setPage }) {
   return (
     <div className={styles.container}>
       <div className={styles.main}></div>
-      <div class={styles.welcome}>
-        <div class={styles.welcomeText}>
+      <div className={styles.welcome}>
+        <div className={styles.welcomeText}>
           <motion.h1
             initial={{ x: 100, opacity: 0 }}
             whileInView={{
@@ -62,8 +59,8 @@ export default function Home({ setPage }) {
               transition: { duration: 0.3 },
             }}
           >
-            Grappling HQ is a cutting edge Jiu Jitsu gym in the Tauranga CBD
-            with sessions 7 days a week!
+            At Grappling HQ, our dedicated coaches are committed to delivering
+            the highest level of martial arts instruction.
           </motion.p>
           <motion.p
             initial={{ x: 100, opacity: 0 }}
@@ -73,20 +70,11 @@ export default function Home({ setPage }) {
               transition: { duration: 0.3 },
             }}
           >
-            We offer classes for all skill levels, children and adults, intense
-            training to get you competition ready, and weekly rolls.
+            Whether you&#39;re a day-one student or a competitive athlete,
+            you&#39;ll learn world-class techniques tailored to help you achieve
+            your individual goals.
           </motion.p>
-          <motion.p
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{
-              x: 0,
-              opacity: 1,
-              transition: { duration: 0.3 },
-            }}
-          >
-            We love what we do, so you&apos;ll often find us on the mats on
-            public holidays too!
-          </motion.p>
+
           <Link href="/contact?">
             <motion.div
               className={styles.button}
@@ -102,7 +90,7 @@ export default function Home({ setPage }) {
                 transition: { duration: 0.3 },
               }}
             >
-              Visit!
+              Visit Us!
             </motion.div>
           </Link>
         </div>

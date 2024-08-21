@@ -1,6 +1,7 @@
 :root {
   --red: #8e1b24;
   --blue: #041184;
+  overflow-x: hidden;
 }
 
 /* Set the black background */
@@ -10,6 +11,7 @@ body {
   text-align: center;
   background-color: white;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .mainContainer {
@@ -18,7 +20,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  overflow-x: hidden;
+
   height: 110%;
 }
 
@@ -208,7 +210,7 @@ button:hover {
 }
 
 a {
-  color: white;
+  color: var(--red);
   text-decoration: none;
 }
 

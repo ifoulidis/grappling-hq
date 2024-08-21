@@ -74,6 +74,16 @@ const ModalMenu = ({ handleClose }) => {
           whileTap={{ scale: 0.9 }}
           onClick={handleClose}
         >
+          <Link href="/little-ninjas" className={styles.navLinks}>
+            Little Ninjas
+          </Link>
+        </motion.div>
+        <motion.div
+          className={styles.linkContainter}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={handleClose}
+        >
           <Link href="/contact" className={styles.navLinks}>
             Contact
           </Link>

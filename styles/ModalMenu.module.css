@@ -37,7 +37,8 @@
 }
 
 .navLinks:hover {
-  color: rgb(3, 179, 248);
+  /* color: rgb(3, 179, 248); */
+  color: var(--red);
 }
 
 .logo {

@@ -24,6 +24,7 @@ function NavigationBar({ page }) {
   const isAbout = page === "about";
   const isTimetable = page === "timetable";
   const isContact = page === "contact";
+  const isNinjas = page === "little-ninjas";
 
   return (
     <nav className={styles.nav}>
@@ -55,6 +56,7 @@ function NavigationBar({ page }) {
             About
           </Link>
         </motion.div>
+
         <motion.div
           whileHover={hoverEffects}
           whileTap={tapEffects}
@@ -65,6 +67,19 @@ function NavigationBar({ page }) {
             className={`${styles.navItem} ${isTimetable ? styles.active : ""}`}
           >
             Timetable
+          </Link>
+        </motion.div>
+
+        <motion.div
+          whileHover={hoverEffects}
+          whileTap={tapEffects}
+          className={styles.desktopNavLinks}
+        >
+          <Link
+            href="/little-ninjas"
+            className={`${styles.navItem} ${isNinjas ? styles.active : ""}`}
+          >
+            Little Ninjas
           </Link>
         </motion.div>
 
