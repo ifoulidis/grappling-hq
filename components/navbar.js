@@ -80,7 +80,7 @@ function NavigationBar({ page }) {
             href="/little-ninjas"
             className={`${styles.navItem} ${isNinjas ? styles.active : ""}`}
           >
-            Kids' Classes
+            Kids&apos; Classes
           </Link>
         </motion.div>
 

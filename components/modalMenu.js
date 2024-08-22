@@ -89,7 +89,7 @@ const ModalMenu = ({ handleClose, page }) => {
             href="/little-ninjas"
             className={`${styles.navLinks} ${isNinjas ? styles.active : ""}`}
           >
-            Kids' Classes
+            Kids&apos; Classes
           </Link>
         </motion.div>
         <motion.div

@@ -11,6 +11,7 @@ export default function Pricing({ setPage }) {
   return (
     <div className={styles.pricingContainer}>
       <h1>Pricing</h1>
+
       <motion.section
         initial="hidden"
         animate="show"
@@ -63,7 +64,25 @@ export default function Pricing({ setPage }) {
           className={styles.membershipCard}
         >
           <h3>$200</h3>
-          <p>Per term - 10 weeks, 20 classes</p>
+          <p>Per term&mdash;10 weeks, 20 classes</p>
+          {/* Add more details or benefits here */}
+        </motion.div>
+      </motion.section>
+      <motion.section
+        initial="hidden"
+        animate="show"
+        variants={fadeInUp}
+        className={styles.membershipSection}
+      >
+        <h2>Free Trial</h2>
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={fadeInUp}
+          className={styles.membershipCard}
+        >
+          <h3>Free</h3>
+          <p>Unlimited classes for 1 week</p>
           {/* Add more details or benefits here */}
         </motion.div>
       </motion.section>
