@@ -1,5 +1,5 @@
 import Image from "next/image";
-import TimeTableImage from "@/public/images/timetable.jpg";
+import TimeTableImage from "@/public/images/timetable.png";
 import { useMediaQuery } from "@mui/material";
 
 function TimeTable({ setPage, ...props }) {

@@ -18,7 +18,8 @@
 }
 
 .heading {
-  font-size: 2rem;
+  font-size: 3rem;
+  color: var(--red);
 }
 
 @media screen and (max-width: 900px) {

@@ -49,23 +49,11 @@
   font-size: 1.5rem;
 }
 
-.story h1 {
-  color: var(--red);
-  font-size: 3rem;
-}
-
-.story {
-  width: 50%;
-  font-size: 1.3rem;
-  margin-left: 25%;
-  text-align: left;
-  padding: 0 0 5rem;
-}
-
 @media screen and (max-width: 776px) {
   .main {
-    background-image: url(../public/images/kids-rolling.jpg);
-    height: 70vh;
+    background-image: url(../public/images/butterfly.jpg);
+    height: auto;
+    aspect-ratio: 1/1;
   }
   .welcome {
     flex-direction: column;
@@ -78,14 +66,10 @@
   .welcomeImage {
     padding: 0%;
     width: 100%;
+    justify-content: center;
   }
   .img {
     width: 100%;
     height: auto;
-  }
-  .story {
-    width: 100%;
-    margin-left: 0;
-    padding: 2rem;
   }
 }

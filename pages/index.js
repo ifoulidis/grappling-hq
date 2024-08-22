@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import KidsClass from "@/public/images/kids-wrestling.jpg";
+import HelpingUp from "@/public/images/helping-up.jpg";
 
 const container = {
   hidden: { opacity: 0, scale: 0 },
@@ -74,31 +74,12 @@ export default function Home({ setPage }) {
             you&#39;ll learn world-class techniques tailored to help you achieve
             your individual goals.
           </motion.p>
-
-          <Link href="/contact?">
-            <motion.div
-              className={styles.button}
-              whileHover={{
-                scale: 1.05,
-                transition: { delay: 0, duration: 0.3 },
-              }}
-              whileTap={{ scale: 0.9 }}
-              initial={{ x: 100, opacity: 0 }}
-              whileInView={{
-                x: 0,
-                opacity: 1,
-                transition: { duration: 0.3 },
-              }}
-            >
-              Visit Us!
-            </motion.div>
-          </Link>
         </div>
         <div className={styles.welcomeImage}>
           <Image
             style={{ boxShadow: "0px 0px 6px black" }}
             alt="Kids practicing Jiu Jitsu"
-            src={KidsClass}
+            src={HelpingUp}
             width={300}
             height={420}
           />

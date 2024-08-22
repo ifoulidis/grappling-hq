@@ -26,7 +26,12 @@ const slideUp = {
   },
 };
 
-const ModalMenu = ({ handleClose }) => {
+const ModalMenu = ({ handleClose, page }) => {
+  const isAbout = page === "about";
+  const isTimetable = page === "timetable";
+  const isContact = page === "contact";
+  const isNinjas = page === "little-ninjas";
+  const isPricing = page === "pricing";
   return (
     <Backdrop onClick={handleClose}>
       <motion.div
@@ -54,7 +59,10 @@ const ModalMenu = ({ handleClose }) => {
           whileTap={{ scale: 0.9 }}
           onClick={handleClose}
         >
-          <Link href="/about" className={styles.navLinks}>
+          <Link
+            href="/about"
+            className={`${styles.navLinks} ${isAbout ? styles.active : ""}`}
+          >
             About
           </Link>
         </motion.div>
@@ -64,7 +72,10 @@ const ModalMenu = ({ handleClose }) => {
           whileTap={{ scale: 0.9 }}
           onClick={handleClose}
         >
-          <Link href="/timetable" className={styles.navLinks}>
+          <Link
+            href="/timetable"
+            className={`${styles.navLinks} ${isTimetable ? styles.active : ""}`}
+          >
             Timetable
           </Link>
         </motion.div>
@@ -74,8 +85,11 @@ const ModalMenu = ({ handleClose }) => {
           whileTap={{ scale: 0.9 }}
           onClick={handleClose}
         >
-          <Link href="/little-ninjas" className={styles.navLinks}>
-            Little Ninjas
+          <Link
+            href="/little-ninjas"
+            className={`${styles.navLinks} ${isNinjas ? styles.active : ""}`}
+          >
+            Kids' Classes
           </Link>
         </motion.div>
         <motion.div
@@ -84,7 +98,23 @@ const ModalMenu = ({ handleClose }) => {
           whileTap={{ scale: 0.9 }}
           onClick={handleClose}
         >
-          <Link href="/contact" className={styles.navLinks}>
+          <Link
+            href="/pricing"
+            className={`${styles.navLinks} ${isPricing ? styles.active : ""}`}
+          >
+            Pricing
+          </Link>
+        </motion.div>
+        <motion.div
+          className={styles.linkContainter}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={handleClose}
+        >
+          <Link
+            href="/contact"
+            className={`${styles.navLinks} ${isContact ? styles.active : ""}`}
+          >
             Contact
           </Link>
         </motion.div>

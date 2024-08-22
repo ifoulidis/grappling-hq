@@ -1,12 +1,18 @@
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/About.module.css";
 import { motion } from "framer-motion";
-import ChrisChoking from "@/public/images/chris-one-arm-choke.jpg";
+import TheCrew from "@/public/images/crew.jpg";
 
 export default function About({ setPage }) {
   setPage("about");
   return (
-    <div className={styles.container}>
+    <div className={styles.aboutContainer}>
+      <Image
+        src={TheCrew}
+        alt="The Grappling HQ crew."
+        width={1000}
+        height={562.5}
+      />
       <div className={styles.story}>
         <motion.h1
           initial={{ x: -100, opacity: 0 }}

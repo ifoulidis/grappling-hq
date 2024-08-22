@@ -25,6 +25,7 @@ function NavigationBar({ page }) {
   const isTimetable = page === "timetable";
   const isContact = page === "contact";
   const isNinjas = page === "little-ninjas";
+  const isPricing = page === "pricing";
 
   return (
     <nav className={styles.nav}>
@@ -79,7 +80,20 @@ function NavigationBar({ page }) {
             href="/little-ninjas"
             className={`${styles.navItem} ${isNinjas ? styles.active : ""}`}
           >
-            Little Ninjas
+            Kids' Classes
+          </Link>
+        </motion.div>
+
+        <motion.div
+          whileHover={hoverEffects}
+          whileTap={tapEffects}
+          className={styles.desktopNavLinks}
+        >
+          <Link
+            href="/pricing"
+            className={`${styles.navItem} ${isPricing ? styles.active : ""}`}
+          >
+            Pricing
           </Link>
         </motion.div>
 
@@ -119,7 +133,7 @@ function NavigationBar({ page }) {
         // Fires when all exiting nodes have completed animating out
         onExitComplete={() => null}
       >
-        {modalOpen && <ModalMenu handleClose={close} />}
+        {modalOpen && <ModalMenu handleClose={close} page={page} />}
       </AnimatePresence>
     </nav>
   );

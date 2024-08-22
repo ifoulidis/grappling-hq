@@ -79,17 +79,32 @@
   height: 100%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1600px) {
   .brandImage {
-    height: 50px;
-    width: 250px;
+    height: 75px;
+    width: 375px;
   }
+  .nav {
+    padding: 1rem;
+  }
+}
+
+/* Display modal menu */
+@media screen and (max-width: 1600px) {
   .menuIcon {
     display: flex;
   }
   .navItem {
     display: none;
   }
+}
+
+@media screen and (max-width: 1000px) {
+  .brandImage {
+    height: 50px;
+    width: 250px;
+  }
+
   .nav {
     margin: 0;
     padding: 1rem;

@@ -34,11 +34,6 @@ body {
   align-items: center;
 }
 
-input,
-textarea {
-  background-color: rgb(240, 240, 240);
-}
-
 .navbar-brand,
 .nav-link {
   color: white;
@@ -185,6 +180,7 @@ textarea {
   margin-bottom: 1rem;
   padding: 0.5rem;
   font-size: 1.6rem;
+  background-color: rgb(240, 240, 240);
 }
 
 textarea {
@@ -309,6 +305,11 @@ a:hover {
 @media screen and (max-width: 900px) {
   #menuIcon {
     display: flex;
+  }
+
+  input,
+  textarea {
+    font-size: 1.3rem;
   }
 
   form {

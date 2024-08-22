@@ -65,9 +65,7 @@ function ContactForm({ initialSubject, ...props }) {
   return (
     <div>
       <main className="main">
-        <div className={styles.headerImage}>
-          <h1>Come And Get After It</h1>
-        </div>
+        <div className={styles.headerImage}></div>
         <h1 className={styles.heading}>Ask Us Something</h1>
         <form onSubmit={handleSubmit}>
           <input

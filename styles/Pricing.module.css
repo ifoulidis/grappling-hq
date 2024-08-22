@@ -1,0 +1,34 @@
+.pricingContainer {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+}
+.pricingContainer h1 {
+  font-size: 3rem;
+  color: var(--red);
+}
+
+.membershipSection {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 30px;
+}
+
+.membershipCard {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.membershipCard h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.membershipCard p {
+  font-size: 16px;
+  color: #666;
+}

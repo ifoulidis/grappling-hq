@@ -3,11 +3,12 @@ import styles from "../styles/LittleNinjas.module.css";
 import Image from "next/image";
 
 export const Slideshow = ({ image, index }) => (
-  <AnimatePresence>
+  <AnimatePresence mode="wait">
     <motion.div
       key={index}
-      initial={{ x: `${index * 100}%` }}
+      initial={{ x: 500 }}
       animate={{ x: 0 }}
+      exit={{ x: -500 }}
       transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
       className={styles.rotatingImage}
     >
