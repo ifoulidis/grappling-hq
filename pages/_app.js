@@ -4,6 +4,7 @@ import NavigationBar from "@/components/navbar";
 import { Rubik } from "next/font/google";
 import { useState } from "react";
 import Head from "next/head";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 // If loading a variable font, you don't need to specify the font weight
 const rubik = Rubik({
@@ -44,6 +45,7 @@ export default function App({ Component, pageProps }) {
       <main className={rubik.className}>
         <NavigationBar page={page} />
         <Component {...pageProps} setPage={setPage} />
+        <GoogleAnalytics gaId="G-5D101MQKZW" />
         <Footer />
       </main>
     </>
