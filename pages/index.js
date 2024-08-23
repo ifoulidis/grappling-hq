@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import HelpingUp from "@/public/images/helping-up.JPG";
+import HelpingUp from "@/public/images/kids-wrestling.JPG";
 
 const container = {
   hidden: { opacity: 0, scale: 0 },
