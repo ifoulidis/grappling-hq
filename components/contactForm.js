@@ -40,10 +40,10 @@ function ContactForm({ initialSubject, ...props }) {
       // Send the email using Email.js
       emailjs
         .send(
-          "service_lx7u87q",
+          "service_f6q36eh",
           "contact_form",
           templateParams,
-          "eCJbOSpcY59_MuyQm"
+          "IdUwdE0afb5XRfoMW"
         )
         .then((response) => {
           console.log("Email sent!", response.status, response.text);
