@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import emailjs from "@emailjs/browser";
+import { sendEmail } from "utils/send_email";
 import { motion } from "framer-motion";
 import styles from "../styles/Contact.module.css";
 import { useMediaQuery } from "@mui/material";
@@ -21,11 +21,10 @@ function ContactForm({ initialSubject, ...props }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Configure Email.js parameters
-    const templateParams = {
+    const data = {
       subject: subject,
-      user_name: name,
-      user_email: email,
+      name: name,
+      email: email,
       message: message,
     };
     if (subject === "") {
@@ -38,13 +37,7 @@ function ContactForm({ initialSubject, ...props }) {
       setconfirmation("Message cannot be blank");
     } else {
       // Send the email using Email.js
-      emailjs
-        .send(
-          "service_lx7u87q",
-          "contact_form",
-          templateParams,
-          "eCJbOSpcY59_MuyQm"
-        )
+      sendEmail(data)
         .then((response) => {
           console.log("Email sent!", response.status, response.text);
           setconfirmation("Email sent successfully!");
