@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    const { subject, name, email, message } = await req.body;
+    const { subject, name, email, message } = req.body;
 
     const transport = nodemailer.createTransport({
       service: "gmail",
@@ -23,18 +23,8 @@ export default async function handler(req, res) {
       text: text,
     };
 
-    const sendMailPromise = () =>
-      new Promise((resolve, reject) =>
-        transport.sendMail(mailOptions, function (err) {
-          if (!err) {
-            resolve("Email sent");
-          } else {
-            reject(err.message);
-          }
-        })
-      );
     try {
-      await sendMailPromise();
+      await transport.sendMail(mailOptions);
       res.status(200).json({ message: "Email Sent!" });
     } catch (err) {
       res.status(500).json({ error: err.message });
