@@ -21,10 +21,11 @@ export default async function handler(req, res) {
       cc: email,
       subject: formattedSubject,
       text: text,
+      html: `<p>From ${email} (${name})</p><br/><p>${message}</p>`,
     };
 
     try {
-      await transport.sendMail(mailOptions);
+      let response = await transport.sendMail(mailOptions);
       res.status(200).json({ message: "Email Sent!" });
     } catch (err) {
       res.status(500).json({ error: err.message });
