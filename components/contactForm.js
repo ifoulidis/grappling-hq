@@ -22,13 +22,6 @@ function ContactForm({ initialSubject, ...props }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const data = {
-      subject: subject,
-      name: name,
-      email: email,
-      message: message,
-    };
-
     if (subject === "") {
       setconfirmation("Subject cannot be blank");
     } else if (name === "") {
@@ -39,7 +32,12 @@ function ContactForm({ initialSubject, ...props }) {
       setconfirmation("Message cannot be blank");
     } else {
       try {
-        const response = await sendEmail(data);
+        const response = sendEmail({
+          subject: subject,
+          name: name,
+          email: email,
+          message: message,
+        });
 
         if (response) {
           setconfirmation(response);
