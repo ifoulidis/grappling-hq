@@ -30,7 +30,7 @@ function Footer() {
           </a>
         </p>
       </div>
-      <div className={styles.section}>
+      <div className={styles.createdSection}>
         <p>Created by</p>
         <h2 className={styles.createdBy}>
           <a

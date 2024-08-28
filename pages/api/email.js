@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
     const mailOptions = {
       from: process.env.MY_EMAIL,
-      to: process.env.MY_EMAIL,
+      to: "isaiahemails@gmail.com",
       cc: email,
       subject: formattedSubject,
       text: text,
@@ -35,7 +35,7 @@ export default async function handler(req, res) {
       );
     try {
       sendMailPromise();
-      res.status(200).json({ message: req.body });
+      res.status(200).json({ message: "Email Sent!" });
     } catch (err) {
       res.status(500).json({ error: err.message });
     }
