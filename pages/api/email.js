@@ -1,39 +1,32 @@
-import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
-export async function POST(request) {
-  const { email, name, message, subject } = await request.json();
+export default async function handler(req, res) {
+  if (req.method === "POST") {
+    try {
+      const { email, name, message, subject } = req.body;
 
-  const transport = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.MY_EMAIL,
-      pass: process.env.MY_PASSWORD,
-    },
-  });
-
-  const mailOptions = {
-    from: process.env.MY_EMAIL,
-    to: process.env.MY_EMAIL,
-    // cc: email, (uncomment this line if you want to send a copy to the sender)
-    subject: `Contact form: ${subject}`,
-    text: `From ${email} (${name})\n${message}`,
-  };
-
-  const sendMailPromise = () =>
-    new Promise((resolve, reject) => {
-      transport.sendMail(mailOptions, function (err) {
-        if (!err) {
-          resolve("Email sent");
-        } else {
-          reject(err.message);
-        }
+      const transport = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: process.env.MY_EMAIL,
+          pass: process.env.MY_PASSWORD,
+        },
       });
-    });
 
-  try {
-    await sendMailPromise();
-    return NextResponse.json({ message: "Email sent" });
-  } catch (err) {
-    return NextResponse.json({ error: err }, { status: 500 });
+      const mailOptions = {
+        from: process.env.MY_EMAIL,
+        to: process.env.MY_EMAIL,
+        subject: `Contact form: ${subject}`,
+        text: `From ${email} (${name})\n${message}`,
+      };
+
+      await transport.sendMail(mailOptions);
+
+      res.status(200).json({ message: "Email sent" });
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  } else {
+    res.status(405).json({ message: "Method not allowed" });
   }
 }
