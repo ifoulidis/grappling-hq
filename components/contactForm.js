@@ -29,8 +29,6 @@ function ContactForm({ initialSubject, ...props }) {
       message: message,
     };
 
-    console.log("Form Data:", data); // Log the form data to verify
-
     if (subject === "") {
       setconfirmation("Subject cannot be blank");
     } else if (name === "") {
@@ -42,7 +40,6 @@ function ContactForm({ initialSubject, ...props }) {
     } else {
       try {
         const response = await sendEmail(data);
-        console.log("Email sent!", response);
 
         if (response) {
           setconfirmation(response);

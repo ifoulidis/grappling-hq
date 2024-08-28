@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     console.log(req.body);
     try {
-      const { email, name, message, subject } = req.body;
+      const { subject, name, email, message } = req.body;
 
       const transport = nodemailer.createTransport({
         service: "gmail",
@@ -14,16 +14,19 @@ export default async function handler(req, res) {
         },
       });
 
+      const text = `From ${email} (${name})\n${message}`;
+      const formattedSubject = `Contact form: ${subject}`;
+
       const mailOptions = {
         from: process.env.MY_EMAIL,
         to: process.env.MY_EMAIL,
-        subject: `Contact form: ${subject}`,
-        text: `From ${email} (${name})\n${message}`,
+        subject: formattedSubject,
+        text: text,
       };
 
       await transport.sendMail(mailOptions);
 
-      res.status(200).json({ message: "Email sent" });
+      res.status(200).json({ message: req.body });
     } catch (err) {
       res.status(500).json({ error: err.message });
     }
