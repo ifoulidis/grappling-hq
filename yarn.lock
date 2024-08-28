@@ -2000,11 +2000,6 @@ natural-compare@^1.4.0:
     "@next/swc-win32-ia32-msvc" "14.2.6"
     "@next/swc-win32-x64-msvc" "14.2.6"
 
-nodemailer@^6.9.14:
-  version "6.9.14"
-  resolved "https://registry.npmjs.org/nodemailer/-/nodemailer-6.9.14.tgz"
-  integrity sha512-Dobp/ebDKBvz91sbtRKhcznLThrKxKt97GI2FAlAyy+fk19j73Uz3sBXolVtmcXjaorivqsbbbjDY+Jkt4/bQA==
-
 object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz"
