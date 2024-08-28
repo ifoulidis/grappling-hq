@@ -34,7 +34,7 @@ export default async function handler(req, res) {
         })
       );
     try {
-      sendMailPromise();
+      await sendMailPromise();
       res.status(200).json({ message: "Email Sent!" });
     } catch (err) {
       res.status(500).json({ error: err.message });
