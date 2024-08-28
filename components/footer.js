@@ -30,6 +30,18 @@ function Footer() {
           </a>
         </p>
       </div>
+      <div className={styles.section}>
+        <p>Created by</p>
+        <h2 className={styles.createdBy}>
+          <a
+            href="http://ifoulidis.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Isaiah Foulidis
+          </a>
+        </h2>
+      </div>
     </footer>
   );
 }
