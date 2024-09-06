@@ -37,8 +37,8 @@ function NavigationBar({ page }) {
         <Link href="/">
           <Image
             src={Logo}
-            width={750}
-            height={150}
+            width={500}
+            height={100}
             className={styles.brandImage}
             alt="Brand logo."
           />
@@ -80,7 +80,7 @@ function NavigationBar({ page }) {
             href="/little-ninjas"
             className={`${styles.navItem} ${isNinjas ? styles.active : ""}`}
           >
-            Kids&apos; Classes
+            Kids Classes
           </Link>
         </motion.div>
 

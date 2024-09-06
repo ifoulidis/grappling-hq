@@ -4,36 +4,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import HelpingUp from "@/public/images/kids-wrestling.jpg";
 
-const container = {
-  hidden: { opacity: 0, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      staggerChildren: 0.5,
-      duration: 0.5,
-    },
-  },
-};
-
-const itemLeft = {
-  hidden: { x: 100, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: { duration: 0.3 },
-  },
-};
-
-const itemRight = {
-  hidden: { x: -100, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: { duration: 0.3 },
-  },
-};
-
 export default function Home({ setPage }) {
   setPage("home");
   return (
@@ -84,6 +54,17 @@ export default function Home({ setPage }) {
             height={420}
           />
         </div>
+      </div>
+      <div className={styles.homeCardCont}>
+        <Link href="/timetable" className={styles.homeCard1}>
+          <h1>Timetable</h1>
+        </Link>
+        <Link href="/little-ninjas" className={styles.homeCard2}>
+          <h1>Kids Classes</h1>
+        </Link>
+        <Link href="/pricing" className={styles.homeCard3}>
+          <h1>Pricing</h1>
+        </Link>
       </div>
       <div className={styles.bottomImage}></div>
     </div>
