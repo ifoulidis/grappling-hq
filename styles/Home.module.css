@@ -85,13 +85,13 @@
 }
 
 .homeCard1 {
-  background-image: url(../public/images/landscape.jpg);
+  background-image: url(../public/images/chris-leg-lock.jpg);
 }
 .homeCard2 {
   background-image: url(../public/images/kids-warm-up.jpg);
 }
 .homeCard3 {
-  background-image: url(../public/images/going-for-choke.JPG);
+  background-image: url(../public/images/quintent-team.jpeg);
 }
 
 @media screen and (max-width: 1400px) {
