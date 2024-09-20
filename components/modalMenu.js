@@ -43,13 +43,13 @@ const ModalMenu = ({ handleClose, page }) => {
         exit="exit"
         transition={{ duration: 0.3 }}
       >
-        <Image
+        {/* <Image
           src={Logo}
           width={48}
           height={27}
           className={styles.logo}
           alt="Brand logo"
-        />
+        /> */}
         <button className={styles.closeButton} onClick={handleClose}>
           &#x2715;
         </button>

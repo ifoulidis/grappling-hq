@@ -16,7 +16,7 @@ export default function Pricing({ setPage }) {
         initial="hidden"
         animate="show"
         variants={fadeInUp}
-        className={styles.membershipSection}
+        className={[styles.membershipSection, styles.separator].join(" ")}
       >
         <h2>Adults Memberships</h2>
         <motion.div
@@ -44,7 +44,7 @@ export default function Pricing({ setPage }) {
         initial="hidden"
         animate="show"
         variants={fadeInUp}
-        className={styles.membershipSection}
+        className={[styles.membershipSection, styles.separator].join(" ")}
       >
         <h2>Kids Memberships</h2>
         <motion.div

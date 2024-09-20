@@ -9,8 +9,11 @@
 }
 
 .membershipSection {
-  border-bottom: 1px solid #ccc;
   padding-bottom: 30px;
+}
+
+.separator {
+  border-bottom: 1px solid #ccc;
 }
 
 .membershipCard {

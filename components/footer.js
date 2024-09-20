@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../styles/Footer.module.css";
 import InstagramIcon from "@/public/Instagram_Glyph_Gradient.png";
 import Image from "next/image";
-import EmailIcon from "@mui/icons-material/Email";
 
 function Footer() {
   return (
@@ -23,16 +22,11 @@ function Footer() {
       </div>
       <div className={styles.section}>
         <h1>Email</h1>
-        <p>
-          grapplinghq@gmail.com
-          <a href="mailto:grapplinghq@gmail.com">
-            <EmailIcon />
-          </a>
-        </p>
+        <p>grapplinghq@gmail.com</p>
       </div>
       <div className={styles.createdSection}>
-        <p>Created by</p>
-        <h2 className={styles.createdBy}>
+        <h1>Created by</h1>
+        <p className={styles.createdBy}>
           <a
             href="http://ifoulidis.vercel.app"
             target="_blank"
@@ -40,7 +34,7 @@ function Footer() {
           >
             Isaiah Foulidis
           </a>
-        </h2>
+        </p>
       </div>
     </footer>
   );
