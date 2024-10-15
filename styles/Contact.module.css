@@ -10,6 +10,18 @@
   justify-content: center;
 }
 
+.section {
+  text-align: center;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 3rem;
+}
+
+.section form {
+  padding-top: 3rem;
+  width: 100%;
+}
+
 .headerImage h1 {
   text-align: center;
   color: var(--red);
@@ -19,7 +31,13 @@
 
 .heading {
   font-size: 3rem;
-  color: var(--red);
+  color: black;
+}
+
+.divider {
+  width: 75%;
+  margin: auto;
+  border: 1px solid var(--red);
 }
 
 @media screen and (max-width: 900px) {
