@@ -1,10 +1,11 @@
-import Footer from "@/components/footer";
+import { Footer } from "@/components/footer";
 import "../styles/globals.css";
 import NavigationBar from "@/components/navbar";
 import { Rubik } from "next/font/google";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Head from "next/head";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { useInView } from "framer-motion";
 
 // If loading a variable font, you don't need to specify the font weight
 const rubik = Rubik({
@@ -14,6 +15,9 @@ const rubik = Rubik({
 
 export default function App({ Component, pageProps }) {
   const [page, setPage] = useState("home");
+  const footerRef = useRef(null);
+  const isInView = useInView(footerRef);
+
   return (
     <>
       <Head>
@@ -43,10 +47,10 @@ export default function App({ Component, pageProps }) {
         />
       </Head>
       <main className={rubik.className}>
-        <NavigationBar page={page} />
+        <NavigationBar page={page} footerVisible={isInView} />
         <Component {...pageProps} setPage={setPage} />
         <GoogleAnalytics gaId="G-5D101MQKZW" />
-        <Footer />
+        <Footer ref={footerRef} />
       </main>
     </>
   );

@@ -45,7 +45,16 @@ export default function Home({ setPage }) {
             your individual goals.
           </motion.p>
         </div>
-        <div className={styles.welcomeImage}>
+        <motion.div
+          initial={{ x: 300, opacity: 0 }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+            transition: { duration: 0.4 },
+          }}
+          viewport={{ once: true, margin: "0px" }}
+          className={styles.welcomeImage}
+        >
           <Image
             style={{ boxShadow: "0px 0px 6px black" }}
             alt="Kids practicing Jiu Jitsu"
@@ -53,18 +62,51 @@ export default function Home({ setPage }) {
             width={300}
             height={420}
           />
-        </div>
+        </motion.div>
       </div>
       <div className={styles.homeCardCont}>
-        <Link href="/timetable" className={styles.homeCard1}>
-          <h1>Timetable</h1>
-        </Link>
-        <Link href="/little-ninjas" className={styles.homeCard2}>
-          <h1>Kids Classes</h1>
-        </Link>
-        <Link href="/pricing" className={styles.homeCard3}>
-          <h1>Pricing</h1>
-        </Link>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: { duration: 0.4, delay: 0.1 },
+          }}
+          viewport={{ once: true, margin: "0px" }}
+          className={styles.homeCard1}
+        >
+          <Link href="/timetable">
+            <h1>Timetable</h1>
+          </Link>
+        </motion.div>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: { duration: 0.4, delay: 0.1 },
+          }}
+          viewport={{ once: true }}
+          className={styles.homeCard2}
+        >
+          <Link href="/little-ninjas">
+            <h1>Kids Classes</h1>
+          </Link>
+        </motion.div>
+        <motion.div
+          initial={{ y: 100, opacity: 0, delay: 0.1 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: { duration: 0.4 },
+          }}
+          viewport={{ once: true, margin: "0px" }}
+          className={styles.homeCard3}
+        >
+          <Link href="/pricing">
+            <h1>Pricing</h1>
+          </Link>
+        </motion.div>
       </div>
       <div className={styles.bottomImage}></div>
     </div>

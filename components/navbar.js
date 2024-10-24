@@ -10,7 +10,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const hoverEffects = { scale: 1.2 };
 const tapEffects = { scale: 0.9 };
 
-function NavigationBar({ page }) {
+function NavigationBar({ page, footerVisible }) {
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
@@ -28,7 +28,7 @@ function NavigationBar({ page }) {
   const isPricing = page === "pricing";
 
   return (
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav} ${footerVisible ? "" : styles.sticky}`}>
       <motion.div
         className={styles.logoContainer}
         whileHover={{ scale: 1.05 }}

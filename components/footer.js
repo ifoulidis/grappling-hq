@@ -2,10 +2,11 @@ import React from "react";
 import styles from "../styles/Footer.module.css";
 import InstagramIcon from "@/public/Instagram_Glyph_Gradient.png";
 import Image from "next/image";
+import { forwardRef } from "react";
 
-function Footer() {
+export const Footer = forwardRef(function Footer(props, ref) {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} ref={ref}>
       <div className={styles.section}>
         <h1>Social</h1>
         <a
@@ -38,6 +39,4 @@ function Footer() {
       </div>
     </footer>
   );
-}
-
-export default Footer;
+});

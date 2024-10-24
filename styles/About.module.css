@@ -1,6 +1,7 @@
 .aboutContainer {
   padding: 0;
   margin: 1rem 0 0;
+  overflow-x: hidden;
 }
 
 .story h1 {
