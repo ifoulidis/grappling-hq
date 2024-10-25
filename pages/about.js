@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "../styles/About.module.css";
 import { motion } from "framer-motion";
 import TheCrew from "@/public/images/crew.jpg";
+import Head from "next/head";
 
 export default function About({ setPage }) {
   setPage("about");

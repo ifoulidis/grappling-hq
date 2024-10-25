@@ -5,6 +5,7 @@ import styles from "../styles/Contact.module.css";
 import { useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import PhoneIcon from "@/public/phone.svg";
+import Head from "next/head";
 
 function ContactForm({ initialSubject, ...props }) {
   const [name, setName] = useState("");
