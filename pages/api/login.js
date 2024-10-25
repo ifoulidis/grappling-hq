@@ -4,12 +4,6 @@ import { serialize } from "cookie";
 export default function handler(req, res) {
   const { username, password } = req.body;
 
-  console.log("Received credentials:", { username, password });
-  console.log("Expected credentials:", {
-    expectedUsername: process.env.USERNAME,
-    expectedPassword: process.env.PASSWORD,
-  });
-
   if (username === process.env.USERNAME && password === process.env.PASSWORD) {
     const cookie = serialize("auth", "authenticated", {
       httpOnly: true,
