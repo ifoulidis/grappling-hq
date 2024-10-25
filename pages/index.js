@@ -13,8 +13,8 @@ export default function Home({ setPage }) {
         <CldImage
           src="home-image"
           alt="Uploaded"
-          width={1134}
-          height={633.5}
+          width={2268}
+          height={1267}
           style={{ objectFit: "cover", width: "100%", height: "100%" }}
         />
       </div>
