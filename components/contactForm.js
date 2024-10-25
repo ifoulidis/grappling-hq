@@ -66,6 +66,32 @@ function ContactForm({ initialSubject, ...props }) {
   };
   return (
     <div>
+      <Head>
+        <title>Grappling HQ</title>
+        <meta property="og:title" content="Grappling HQ" />
+        <meta
+          property="og:image"
+          content={`https://grapplinghq.com/chris-one-arm-choke.jpg`}
+        />
+        <meta
+          property="og:description"
+          content="32 Second Avenue, Tauranga Central"
+        />
+        <meta
+          name="twitter:image"
+          content={`https://grapplinghq.com/chris-one-arm-choke.jpg`}
+        />
+        <meta name="description" content="32 Second Avenue, Tauranga Central" />
+        <meta name="twitter:title" content="Grappling HQ" />
+        <meta
+          name="twitter:description"
+          content="32 Second Avenue, Tauranga Central"
+        />
+        <meta
+          name="twitter:image"
+          content={`https://grapplinghq.com/chris-one-arm-choke.jpg`}
+        />
+      </Head>
       <main className="main">
         {/* <div className={styles.headerImage}></div> */}
         <section className={styles.section}>
@@ -94,6 +120,7 @@ function ContactForm({ initialSubject, ...props }) {
         <hr className={styles.divider} />
         <section className={styles.section}>
           <h1 className={styles.heading}>Ask Us Something</h1>
+          <h1 className="confirmationText">{confirmation}</h1>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
@@ -135,7 +162,6 @@ function ContactForm({ initialSubject, ...props }) {
               Submit
             </motion.button>
           </form>
-          <h1 className="confirmationText">{confirmation}</h1>
         </section>
         <hr className={styles.divider} />
         <section className={styles.section}>
