@@ -3,12 +3,21 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import HelpingUp from "@/public/images/kids-wrestling.jpg";
+import { CldImage } from "next-cloudinary";
 
 export default function Home({ setPage }) {
   setPage("home");
   return (
     <div className={styles.container}>
-      <div className={styles.main}></div>
+      <div className={styles.main}>
+        <CldImage
+          src="home-image"
+          alt="Uploaded"
+          width={1134}
+          height={633.5}
+          style={{ objectFit: "cover", width: "100%", height: "100%" }}
+        />
+      </div>
       <div className={styles.welcome}>
         <div className={styles.welcomeText}>
           <motion.h1

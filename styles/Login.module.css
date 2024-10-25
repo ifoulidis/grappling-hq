@@ -1,0 +1,24 @@
+.container {
+  min-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container h1 {
+  color: var(--red);
+  font-size: 3rem;
+}
+
+.container h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .container h1 {
+    font-size: 2rem;
+  }
+}

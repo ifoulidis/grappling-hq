@@ -4,11 +4,8 @@
 }
 
 .main {
-  height: 90vh;
-  background-image: url(../public/images/chris-one-arm-choke.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  height: 600px;
+  overflow: hidden;
 }
 
 .bottomImage {

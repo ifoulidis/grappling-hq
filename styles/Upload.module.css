@@ -1,0 +1,30 @@
+.container {
+  min-height: 90vh;
+  overflow: hidden;
+}
+
+.container h1 {
+  color: var(--red);
+  font-size: 3rem;
+}
+
+.container h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container hr {
+  margin: 5rem auto;
+  border: 2px solid var(--red);
+  width: 75%;
+}
+
+.container section {
+  padding: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .container h1 {
+    font-size: 2rem;
+  }
+}
