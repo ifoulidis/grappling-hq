@@ -19,7 +19,7 @@ export default function Pricing({ setPage }) {
         />
         <meta
           property="og:description"
-          content="Free trial, $39 for unlimited classes per week..."
+          content="Free trial, $45 for unlimited classes per week..."
         />
         <meta
           name="twitter:image"
@@ -27,12 +27,12 @@ export default function Pricing({ setPage }) {
         />
         <meta
           name="description"
-          content="Free trial, $39 for unlimited classes per week..."
+          content="Free trial, $45 for unlimited classes per week..."
         />
         <meta name="twitter:title" content="Grappling HQ" />
         <meta
           name="twitter:description"
-          content="Free trial, $39 for unlimited classes per week..."
+          content="Free trial, $45 for unlimited classes per week..."
         />
         <meta
           name="twitter:image"
@@ -56,7 +56,7 @@ export default function Pricing({ setPage }) {
             variants={fadeInUp}
             className={styles.membershipCard}
           >
-            <h3>$25</h3>
+            <h3>$32</h3>
             <p>Any two classes per week</p>
             {/* Add more details or benefits here */}
           </motion.div>
@@ -66,7 +66,7 @@ export default function Pricing({ setPage }) {
             variants={fadeInUp}
             className={styles.membershipCard}
           >
-            <h3>$39</h3>
+            <h3>$45</h3>
             <p>Unlimited classes per week</p>
             {/* Add more details or benefits here */}
           </motion.div>
@@ -84,7 +84,7 @@ export default function Pricing({ setPage }) {
             variants={fadeInUp}
             className={styles.membershipCard}
           >
-            <h3>$25</h3>
+            <h3>$32</h3>
             <p>2 classes per week</p>
             {/* Add more details or benefits here */}
           </motion.div>
