@@ -84,7 +84,7 @@ export default function Pricing({ setPage }) {
             variants={fadeInUp}
             className={styles.membershipCard}
           >
-            <h3>$32</h3>
+            <h3>$25</h3>
             <p>2 classes per week</p>
             {/* Add more details or benefits here */}
           </motion.div>
