@@ -6,11 +6,11 @@ import KidsRolling from "@/public/images/kids-rolling.jpg";
 import KidsWarmUp from "@/public/images/kids-warm-up.jpg";
 import { Slideshow } from "@/components/SlideShow";
 
-export default function LittleNinjas({ setPage }) {
+export default function MMA({ setPage }) {
   let [index, setIndex] = useState(0);
   let [interaction, setInteraction] = useState(false);
 
-  setPage("little-ninjas");
+  setPage("mma");
 
   const images = [KidsWarmUp, KidsWrestling, KidsRolling];
 

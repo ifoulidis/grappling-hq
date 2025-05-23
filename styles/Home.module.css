@@ -98,7 +98,8 @@
   background-image: url(../public/images/kids-warm-up.jpg);
 }
 .homeCard3 {
-  background-image: url(../public/images/ghq-team.jpg);
+  background-image: linear-gradient(hsla(0, 0%, 0%, 0.3), hsla(0, 0%, 0%, 0.3)),
+    url(../public/images/chris-teaching-mma.jpeg);
 }
 
 @media screen and (max-width: 1400px) {

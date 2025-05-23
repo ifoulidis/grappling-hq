@@ -31,6 +31,7 @@ const ModalMenu = ({ handleClose, page }) => {
   const isTimetable = page === "timetable";
   const isContact = page === "contact";
   const isNinjas = page === "little-ninjas";
+  const isMma = page === "mma";
   const isPricing = page === "pricing";
   return (
     <Backdrop onClick={handleClose}>
@@ -53,19 +54,7 @@ const ModalMenu = ({ handleClose, page }) => {
         <button className={styles.closeButton} onClick={handleClose}>
           &#x2715;
         </button>
-        <motion.div
-          className={styles.linkContainter}
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={handleClose}
-        >
-          <Link
-            href="/about"
-            className={`${styles.navLinks} ${isAbout ? styles.active : ""}`}
-          >
-            About
-          </Link>
-        </motion.div>
+
         <motion.div
           className={styles.linkContainter}
           whileHover={{ scale: 1.2 }}
@@ -77,6 +66,19 @@ const ModalMenu = ({ handleClose, page }) => {
             className={`${styles.navLinks} ${isTimetable ? styles.active : ""}`}
           >
             Timetable
+          </Link>
+        </motion.div>
+        <motion.div
+          className={styles.linkContainter}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={handleClose}
+        >
+          <Link
+            href="/mma"
+            className={`${styles.navLinks} ${isNinjas ? styles.active : ""}`}
+          >
+            MMA
           </Link>
         </motion.div>
         <motion.div
@@ -116,6 +118,19 @@ const ModalMenu = ({ handleClose, page }) => {
             className={`${styles.navLinks} ${isContact ? styles.active : ""}`}
           >
             Contact
+          </Link>
+        </motion.div>
+        <motion.div
+          className={styles.linkContainter}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={handleClose}
+        >
+          <Link
+            href="/about"
+            className={`${styles.navLinks} ${isAbout ? styles.active : ""}`}
+          >
+            About
           </Link>
         </motion.div>
       </motion.div>

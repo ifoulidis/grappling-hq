@@ -104,6 +104,20 @@ export default function Home({ setPage }) {
         </div>
         <div className={styles.homeCardCont}>
           <motion.div
+            initial={{ y: 100, opacity: 0, delay: 0.1 }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.4 },
+            }}
+            viewport={{ once: true, margin: "0px" }}
+            className={styles.homeCard3}
+          >
+            <Link href="/mma">
+              <h1>MMA</h1>
+            </Link>
+          </motion.div>
+          <motion.div
             initial={{ y: 100, opacity: 0 }}
             whileInView={{
               y: 0,
@@ -113,6 +127,7 @@ export default function Home({ setPage }) {
             viewport={{ once: true, margin: "0px" }}
             className={styles.homeCard1}
           >
+            <div className={styles.overlay}></div>
             <Link href="/timetable">
               <h1>Timetable</h1>
             </Link>
@@ -129,20 +144,6 @@ export default function Home({ setPage }) {
           >
             <Link href="/little-ninjas">
               <h1>Kids Classes</h1>
-            </Link>
-          </motion.div>
-          <motion.div
-            initial={{ y: 100, opacity: 0, delay: 0.1 }}
-            whileInView={{
-              y: 0,
-              opacity: 1,
-              transition: { duration: 0.4 },
-            }}
-            viewport={{ once: true, margin: "0px" }}
-            className={styles.homeCard3}
-          >
-            <Link href="/pricing">
-              <h1>Pricing</h1>
             </Link>
           </motion.div>
         </div>

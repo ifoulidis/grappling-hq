@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import styles from "../styles/LittleNinjas.module.css";
+import styles from "../styles/ClassDetails.module.css";
 import Image from "next/image";
 
 export const Slideshow = ({ image, index }) => (
