@@ -26,9 +26,9 @@ export default function Teens({ setPage }) {
           }}
           viewport={{ once: true }}
         >
-          It's no secret that teens need a positive outlet, and martial arts is
-          the perfect fit for many. It is competitive, strenuous, and highly
-          skilled.
+          It&apos;s no secret that teens need a positive outlet, and martial
+          arts is the perfect fit for many. It is competitive, strenuous, and
+          highly skilled.
         </motion.p>
         <motion.p
           initial={{ x: -100, opacity: 0 }}
