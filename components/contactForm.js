@@ -99,9 +99,16 @@ function ContactForm({ initialSubject, ...props }) {
           <motion.div
             initial={{ scale: 0.5 }}
             whileInView={{ scale: 1 }}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
             viewport={{ once: true }}
+            animate={{
+              rotate: [0, -10, 10, -10, 10, 0], // Jiggle effect
+            }}
+            transition={{
+              duration: 0.6,
+              repeat: Infinity,
+              repeatDelay: 3.5, // Wait 2 seconds between jiggles
+              ease: "easeInOut",
+            }}
           >
             <a href="tel:+642102340038">
               <Image
@@ -115,7 +122,7 @@ function ContactForm({ initialSubject, ...props }) {
           <br />
           <h2>Call or text to ask how to get started!</h2>
           <h2>
-            <a href="tel:+642102340038">02102340038</a>
+            <a href="tel:+642102340038">021 023 40 038</a>
           </h2>
         </section>
         <hr className={styles.divider} />
