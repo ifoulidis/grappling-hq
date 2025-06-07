@@ -1,5 +1,4 @@
 // /pages/upload.js
-import { useState } from "react";
 import { CldUploadButton, CldImage } from "next-cloudinary";
 import styles from "@/styles/Upload.module.css";
 import { parse } from "cookie";

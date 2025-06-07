@@ -124,48 +124,28 @@ const ModalMenu = ({ handleClose, page }) => {
           </motion.div>
         </div>
         <div className={styles.smallLinks}>
-          <motion.div
-            className={styles.linkContainter}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={handleClose}
+          <Link
+            href="/about"
+            className={`${styles.navLinks} ${isAbout ? styles.active : ""}`}
           >
-            <Link
-              href="/about"
-              className={`${styles.navLinks} ${isAbout ? styles.active : ""}`}
-            >
-              How we began
-            </Link>
-          </motion.div>
-          <motion.div
-            className={styles.linkContainter}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={handleClose}
-          >
-            <Link
-              href="/pricing"
-              className={`${styles.navLinks} ${isPricing ? styles.active : ""}`}
-            >
-              Pricing
-            </Link>
-          </motion.div>
+            Our story
+          </Link>
 
-          <motion.div
-            className={styles.linkContainter}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={handleClose}
+          <Link
+            href="/pricing"
+            className={`${styles.navLinks} ${isPricing ? styles.active : ""}`}
           >
-            <Link
-              href="/competitions"
-              className={`${styles.navLinks} ${
-                isCompetitions ? styles.active : ""
-              }`}
-            >
-              Team results
-            </Link>
-          </motion.div>
+            Pricing
+          </Link>
+
+          <Link
+            href="/competitions"
+            className={`${styles.navLinks} ${
+              isCompetitions ? styles.active : ""
+            }`}
+          >
+            Team results
+          </Link>
         </div>
       </motion.div>
     </Backdrop>
