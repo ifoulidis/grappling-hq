@@ -46,7 +46,7 @@ function TimeTable({ setPage, ...props }) {
             rel="noopener noreferrer"
           >
             <CldImage
-              src="https://res.cloudinary.com/dvwneza55/image/upload/v1729839674/timetable.png"
+              src={`https://res.cloudinary.com/dvwneza55/image/upload/v1729839674/timetable.png?v=${Date.now()}`}
               alt="timetable"
               width={1080}
               height={1080}
