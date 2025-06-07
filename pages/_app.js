@@ -3,7 +3,7 @@ import "../styles/globals.css";
 import NavigationBar from "@/components/navbar";
 import { Rubik } from "next/font/google";
 import { useState, useRef } from "react";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 import { useInView } from "framer-motion";
 
 // If loading a variable font, you don't need to specify the font weight
@@ -21,7 +21,14 @@ export default function App({ Component, pageProps }) {
     <main className={rubik.className}>
       <NavigationBar page={page} footerVisible={isInView} />
       <Component {...pageProps} setPage={setPage} />
-      <GoogleAnalytics gaId="G-5D101MQKZW" />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5D101MQKZW');
+          `}
+      </Script>
       <Footer ref={footerRef} />
     </main>
   );

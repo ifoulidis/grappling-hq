@@ -25,6 +25,7 @@ function NavigationBar({ page, footerVisible }) {
   const isTimetable = page === "timetable";
   const isContact = page === "contact";
   const isNinjas = page === "little-ninjas";
+  const isMma = page === "mma";
   const isPricing = page === "pricing";
 
   return (
@@ -44,11 +45,11 @@ function NavigationBar({ page, footerVisible }) {
           />
         </Link>
       </motion.div>
-      <div className={styles.desktopNav}>
+      <div className={`${styles.desktopNav}`}>
         <motion.div
           whileHover={hoverEffects}
           whileTap={tapEffects}
-          className={styles.desktopNavLinks}
+          className={`${styles.desktopNavLinks} ${styles.hidden}`}
         >
           <Link
             href="/about"
@@ -61,7 +62,7 @@ function NavigationBar({ page, footerVisible }) {
         <motion.div
           whileHover={hoverEffects}
           whileTap={tapEffects}
-          className={styles.desktopNavLinks}
+          className={`${styles.desktopNavLinks}`}
         >
           <Link
             href="/timetable"
@@ -74,7 +75,20 @@ function NavigationBar({ page, footerVisible }) {
         <motion.div
           whileHover={hoverEffects}
           whileTap={tapEffects}
-          className={styles.desktopNavLinks}
+          className={`${styles.desktopNavLinks}`}
+        >
+          <Link
+            href="/mma"
+            className={`${styles.navItem} ${isMma ? styles.active : ""}`}
+          >
+            MMA
+          </Link>
+        </motion.div>
+
+        <motion.div
+          whileHover={hoverEffects}
+          whileTap={tapEffects}
+          className={`${styles.desktopNavLinks}`}
         >
           <Link
             href="/little-ninjas"
@@ -87,7 +101,7 @@ function NavigationBar({ page, footerVisible }) {
         <motion.div
           whileHover={hoverEffects}
           whileTap={tapEffects}
-          className={styles.desktopNavLinks}
+          className={`${styles.desktopNavLinks} ${styles.hidden}`}
         >
           <Link
             href="/pricing"
@@ -100,7 +114,7 @@ function NavigationBar({ page, footerVisible }) {
         <motion.div
           whileHover={hoverEffects}
           whileTap={tapEffects}
-          className={styles.desktopNavLinks}
+          className={`${styles.desktopNavLinks} ${styles.hidden}`}
         >
           <Link
             href="/contact"

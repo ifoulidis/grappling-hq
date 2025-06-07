@@ -1,10 +1,11 @@
-import styles from "../styles/LittleNinjas.module.css";
+import styles from "../styles/ClassDetails.module.css";
 import { useState, useEffect } from "react";
 import { motion, MotionConfig } from "framer-motion";
 import KidsWrestling from "@/public/images/kids-wrestling.jpg";
 import KidsRolling from "@/public/images/kids-rolling.jpg";
 import KidsWarmUp from "@/public/images/kids-warm-up.jpg";
 import { Slideshow } from "@/components/SlideShow";
+import { CalendarToday } from "@mui/icons-material";
 
 export default function LittleNinjas({ setPage }) {
   let [index, setIndex] = useState(0);
@@ -43,16 +44,10 @@ export default function LittleNinjas({ setPage }) {
     <div className={styles.container}>
       <div class={styles.welcome}>
         <div class={styles.welcomeText}>
-          <motion.h1
-            initial={{ x: 100, opacity: 0 }}
-            whileInView={{
-              x: 0,
-              opacity: 1,
-              transition: { duration: 0.3 },
-            }}
-          >
-            Little Ninjas
-          </motion.h1>
+          <h1>Little Ninjas</h1>
+          <h2>
+            <CalendarToday fontSize="inherit" /> Monday to Thursday
+          </h2>
           <motion.p
             initial={{ x: 100, opacity: 0 }}
             whileInView={{
@@ -60,6 +55,7 @@ export default function LittleNinjas({ setPage }) {
               opacity: 1,
               transition: { duration: 0.3 },
             }}
+            viewport={{ once: true }}
           >
             At Grappling HQ, we welcome kids aged five to twelve, regardless of
             their experience level. For our youngest Ninjas, ages five to eight,
@@ -75,6 +71,7 @@ export default function LittleNinjas({ setPage }) {
               opacity: 1,
               transition: { duration: 0.3 },
             }}
+            viewport={{ once: true }}
           >
             For our nine to twelve-year-olds, we take it up a notch! They begin
             to explore the world of submissions and discover their

@@ -22,8 +22,10 @@ export const Footer = forwardRef(function Footer(props, ref) {
         <p>32 Second Avenue, Tauranga</p>
       </div>
       <div className={styles.section}>
-        <h1>Email</h1>
-        <p>grapplinghq@gmail.com</p>
+        <h1>Phone</h1>
+        <p>
+          <a href="tel:+642102340038">021 023 40 038</a>
+        </p>
       </div>
       <div className={styles.createdSection}>
         <h1>Created by</h1>
